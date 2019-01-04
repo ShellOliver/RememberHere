@@ -38,7 +38,7 @@ export default class HomeScreen extends React.Component {
           </View>
 
           <View style={styles.helpContainer}>
-            <TouchableOpacity onPress={this._handleHelpPress} style={styles.helpLink}>
+            <TouchableOpacity onPress={this._handleGithubPress} style={styles.helpLink}>
               <Text style={styles.helpLinkText}>github</Text>
             </TouchableOpacity>
           </View>
@@ -48,14 +48,8 @@ export default class HomeScreen extends React.Component {
     );
   }
 
-  _handleLearnMorePress = () => {
-    WebBrowser.openBrowserAsync('https://docs.expo.io/versions/latest/guides/development-mode');
-  };
-
-  _handleHelpPress = () => {
-    WebBrowser.openBrowserAsync(
-      'https://docs.expo.io/versions/latest/guides/up-and-running.html#can-t-see-your-changes'
-    );
+  _handleGithubPress = () => {
+    WebBrowser.openBrowserAsync('https://github.com/ShellOliver/RememberHere');
   };
 }
 
